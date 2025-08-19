@@ -7,7 +7,7 @@ This repository contains the code necessary to reproduce UW-BENMT's system submi
 1. Data selection for IT-domain specific NMT training using Cross-Entropy Difference
 2. Source-target word alignment using an off-the-shelf Neural Word Aligner - Awesome Align
 3. Data processing to account for multiword alignments between source and target language
-4. Retrieval of most "important" word-alignments for downstream terminology-aware NMT training
+4. Select the most "important" word-alignment(s) for downstream terminology-aware NMT training by computing the norm of the encoder's final hidden states.
 5. Evaluation of systems for general translation quality (BLEU, COMET, Chrff++), and Terminology Success Rate (with and without lemmatization)
 
 
