@@ -6,11 +6,17 @@ This repository contains the code necessary to reproduce UW-BENMT's system submi
 # Getting Started
 
 1. Awesome-align for Neural Word Alignment:
-   git clone
+   
+   git clone https://github.com/Benjamin-Pong/awesome-align.git
+   
    conda env create -f environment.yml
+   
    conda activate awesome_align
    
 3. Fairseq for NMT training:
-   git clone
+   
+   git clone https://github.com/Benjamin-Pong/fairseq.git
+   
    conda env create -f environment.yml
+   
    conda activate fairseq
