@@ -1,6 +1,10 @@
 # Introduction
 
-This repository contains the code necessary to reproduce UW-BENMT's system submission to WMT2025 Terminology Shared Task. The products are Neural Machine Translation models that are able to translate information-technology content, with special focus on translating terminologies in this domain, across en-de, en-ru and en-es language pairs.
+This repository contains the code necessary to reproduce UW-BENMT's system submission to WMT2025 Terminology Shared Task. The products are Neural Machine Translation models that are able to translate information-technology content, with special focus on translating terminologies in this domain, across en-de, en-ru and en-es language pairs. In particular, this system addresses a research gap in terminology-aware neural machine translation - how does one select terminology constraints as soft-constraints at training time?
+
+Practical applications of this system involve translating API documentations, code and technical manuals (i.e. DevOps manuals), allowing knowledge exchange across multilingual cross-functional operations.
+
+
 
 # Overview of System
 
