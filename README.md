@@ -17,12 +17,14 @@ Practical applications of this system involve translating API documentations, co
 
 # Getting Started
 
+Install the respective dependencies to use the following infrastructures:
+
 1. Awesome-align for Neural Word Alignment:
    
    git clone https://github.com/Benjamin-Pong/awesome-align.git
    
    conda env create -f environment.yml
-   
+
    conda activate awesome_align
    
 3. Fairseq for NMT training:
