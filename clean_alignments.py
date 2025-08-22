@@ -1,12 +1,10 @@
 '''
 Goal is to repurpose the alignment indices to account for multi-word terms. Terminologies are not just bijections
 Input:  would be 2 files in parajoah form, and word form
-output: 2 files in parajoah form, and word form
+output: 2 files in pharoah form, and word form (these are alignments between indices, and actual words, respectively. They are outputs of Awesome Align.)
 
-one-to-one: 
-Surjection (en->):
 
-removed duplicates, removed stopwords, accounted for multiword terms en->german direction
+removed duplicates, removed stopwords, accounted for multiword terms
 
 '''
 
@@ -219,6 +217,7 @@ if __name__ == "__main__":
                 
 
             
+
 
 
 
