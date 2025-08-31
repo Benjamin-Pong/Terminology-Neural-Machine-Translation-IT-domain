@@ -56,15 +56,17 @@ Output would be three sets of synthetic data, one for spanish, one for german an
 
 ## Train in-domain and out-domain statistical language models
 
-Run ./lm.sh 
+```bash
+./lm.sh
+```
 
-Output will be an in-domain and out-domain language models (pickle files)
+Outputs are in-domain and out-domain language models (pickle files)
 
 ## Data selection by Cross-Entropy Difference scoring
 
-'''bash
+```bash
 compute_CE.sh
-'''
+```
 
 Output is a corpora that has been ranked in non-increasing order based on the Cross-Entropy Difference
 
