@@ -35,5 +35,35 @@ Install the respective dependencies to use the following infrastructures:
    
    conda activate fairseq
 
+# Preparing IT-related data for NMT training
+
+
+To generate IT-related data, we will use the Moore-Lewis Cross-Entropy Difference approach to retrieve IT-related data from a pool of publicly available parallel data.
+
+Sources of Publicly available data for each language pair:
+- en-es, en-de: Europarl and WikiMatrix
+- en-ru: WikiMatrix and Paracrawl
+
+Download them into your local directory
+
+## Generate in-domain data via synthetic data generation
+
+Run the script synthetic_data_generation.ipynb using google colab. Since this uses an LLM to generate synthetic data, a gpu is required - L4.
+
+Output would be three sets of synthetic data, one for spanish, one for german and one for russian. These files will serve as argument inputs into lm.py when we train our  in-domain statistical language models.
+
+## Generate out-domain data
+
+## Train in-domain and out-domain statistical language models
+
+Run ./lm.sh 
+
+Output will be an in-domain and out-domain language models (pickle files)
+
+## Data selection by Cross-Entropy Difference scoring
+
+Run compute_CE.sh
+
+Output is a corpora that has been ranked in non-increasing order based on the Cross-Entropy Difference
 
 
