@@ -20,20 +20,27 @@ Practical applications of this system involve translating API documentations, co
 Install the respective dependencies to use the following infrastructures:
 
 1. Awesome-align for Neural Word Alignment:
-   
-   git clone https://github.com/Benjamin-Pong/awesome-align.git
-   
-   conda env create -f environment.yml
 
-   conda activate awesome_align
+   ```
+   git clone https://github.com/Benjamin-Pong/awesome-align.git
+   ```
+   
+   ```
+   conda env create -f environment.yml
+   ```
+
+
    
 3. Fairseq for NMT training:
+
    
+   ```
    git clone https://github.com/Benjamin-Pong/fairseq.git
-   
+   ```
+
+   ```
    conda env create -f environment.yml
-   
-   conda activate fairseq
+   ```
 
 # Preparing IT-related data for NMT training
 
@@ -69,5 +76,25 @@ compute_CE.sh
 ```
 
 Output is a corpora that has been ranked in non-increasing order based on the Cross-Entropy Difference
+
+# Neural Word Alignment
+
+The next step is to extract word-alignments from the data that we have selected for the parallel corpora. This is where Awesome Align will be integrated.
+
+```bash
+cd nwa
+```
+
+```
+conda activate awesome_align
+```
+
+Convert the parallel data into the desired format to be consumed by the neural word aligner.
+
+```bash
+prepare.sh
+```
+
+
 
 
