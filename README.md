@@ -62,7 +62,9 @@ Output will be an in-domain and out-domain language models (pickle files)
 
 ## Data selection by Cross-Entropy Difference scoring
 
-Run compute_CE.sh
+'''bash
+compute_CE.sh
+'''
 
 Output is a corpora that has been ranked in non-increasing order based on the Cross-Entropy Difference
 
