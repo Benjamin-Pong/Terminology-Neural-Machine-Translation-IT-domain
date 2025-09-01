@@ -72,7 +72,7 @@ Outputs are in-domain and out-domain language models (pickle files)
 ## Data selection by Cross-Entropy Difference scoring
 
 ```bash
-compute_CE.sh
+./compute_CE.sh
 ```
 
 Output is a corpora that has been ranked in non-increasing order based on the Cross-Entropy Difference
@@ -92,7 +92,7 @@ conda activate awesome_align
 Convert the parallel data into the desired format to be consumed by the neural word aligner.
 
 ```bash
-prepare.sh
+./prepare.sh
 ```
 
 
