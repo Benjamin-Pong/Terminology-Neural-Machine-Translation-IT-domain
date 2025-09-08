@@ -95,6 +95,20 @@ Convert the parallel data into the desired format to be consumed by the neural w
 ./prepare.sh
 ```
 
+Next, activate your conda environment for awesome align, and run the following, where $DATA_FILE is the directory pointing to the output of ./prepare.sh.
+
+```bash
+cd  awesome-align directory 
+CUDA_VISIBLE_DEVICES=0 awesome-align \
+    --output_file=$OUTPUT_FILE \
+    --model_name_or_path=$MODEL_NAME_OR_PATH \
+    --data_file=$DATA_FILE \
+    --extraction 'softmax' \
+    --batch_size 64 \
+    --output_word_file=$OUTPUT_WORD_FILE \
+    --output_prob_file=$OUTPUT_PROB_FILE \
+    --num_workers 2
+```
 # TBC
 
 
