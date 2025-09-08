@@ -98,7 +98,7 @@ Convert the parallel data into the desired format to be consumed by the neural w
 Next, activate your conda environment for awesome align, and run the following, where $DATA_FILE is the directory pointing to the output of ./prepare.sh.
 
 ```bash
-cd  awesome-align directory 
+cd  awesome-align
 CUDA_VISIBLE_DEVICES=0 awesome-align \
     --output_file=$OUTPUT_FILE \
     --model_name_or_path=$MODEL_NAME_OR_PATH \
