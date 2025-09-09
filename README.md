@@ -79,7 +79,7 @@ Output is a corpora that has been ranked in non-increasing order based on the Cr
 
 # Neural Word Alignment
 
-The next step is to extract word-alignments from the data that we have selected for the parallel corpora. This is where Awesome Align will be integrated.
+The next step is to extract word-alignments from the data that we have selected for the parallel corpora. This is where Awesome Align will be integrated. Note that the neural word alignment step can be applied to both the in-domain and out-domain parallel corpora.
 
 ```bash
 cd nwa
@@ -95,7 +95,7 @@ Convert the parallel data into the desired format to be consumed by the neural w
 ./prepare.sh
 ```
 
-Next, activate your conda environment for awesome align, and run the following, where $DATA_FILE is the directory pointing to the output of ./prepare.sh.
+Next, activate your conda environment for awesome align, and run the following, where $DATA_FILE is the directory pointing to the output of ./prepare.sh. 
 
 ```bash
 cd  awesome-align
@@ -108,6 +108,16 @@ CUDA_VISIBLE_DEVICES=0 awesome-align \
     --output_word_file=$OUTPUT_WORD_FILE \
     --output_prob_file=$OUTPUT_PROB_FILE \
     --num_workers 2
+```
+
+To account for multi-word alignments, run the following, by initializing the $lang with the language codes 'de', 'ru' or 'es' for their respective corpora, and initialize $in_out_data with 'indomain' or 'outdomain'.
+
+```
+python clean_alignments.py \
+    --iw "nwa_$in_out_data.mil.words.$lang.txt" \
+    --ip "nwa_$in_out_data.mil.pharaoh.$lang.txt" \
+    --ow "nwa_$in_out_data.multi.mil.words.$lang.txt" \
+    --op "nwa_$in_out_data.multi.mil.pharaoh.$lang.txt"
 ```
 # TBC
 
