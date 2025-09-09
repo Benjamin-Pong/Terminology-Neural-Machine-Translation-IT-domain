@@ -95,7 +95,7 @@ Convert the parallel data into the desired format to be consumed by the neural w
 ./prepare.sh
 ```
 
-Next, activate your conda environment for awesome align, and run the following, where $DATA_FILE is the directory pointing to the output of ./prepare.sh. 
+Next, activate your conda environment for awesome align, and run the following, where $DATA_FILE is the directory pointing to the output of ./prepare.sh.  The output of the awesome-align command are source-target alignments in two formats word-level and pharoah (see the documentation for Awesome Align's repository).
 
 ```bash
 cd  awesome-align
@@ -110,7 +110,7 @@ CUDA_VISIBLE_DEVICES=0 awesome-align \
     --num_workers 2
 ```
 
-To account for multi-word alignments, run the following, by initializing the $lang with the language codes 'de', 'ru' or 'es' for their respective corpora, and initialize $in_out_data with 'indomain' or 'outdomain'.
+To account for multi-word alignments and their corresponding pharoah alignments, run the following, by initializing the $lang with the language codes 'de', 'ru' or 'es' for their respective corpora, and initialize $in_out_data with 'indomain' or 'outdomain'.
 
 ```
 python clean_alignments.py \
@@ -119,7 +119,10 @@ python clean_alignments.py \
     --ow "nwa_$in_out_data.multi.mil.words.$lang.txt" \
     --op "nwa_$in_out_data.multi.mil.pharaoh.$lang.txt"
 ```
-# TBC
+
+Due to the proliferation of word-alignments, there is a need to select only a subset of them for NMT training.
+
+# Selection of Pseudo-terminologies for NMT training (TBC)
 
 
 
