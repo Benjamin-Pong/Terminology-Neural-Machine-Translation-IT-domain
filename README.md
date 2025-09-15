@@ -61,6 +61,11 @@ Output would be three sets of synthetic data, one for spanish, one for german an
 
 ## Generate out-domain data
 
+Run the script out_domain_dataprep.ipynb to generate the outdomain splits. There are two output files for this script: 
+
+1) the outdomain training split which will be used to train an outdomain statistical language model (30,000 samples)
+2) a much larger pool of outdomain data from which we will extract data that is 'closest' to the IT-domain.
+
 ## Train in-domain and out-domain statistical language models
 
 ```bash
