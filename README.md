@@ -130,5 +130,23 @@ Due to the proliferation of word-alignments, there is a need to select only a su
 # Selection of Pseudo-terminologies for NMT training (TBC)
 
 
+# Citation
+
+```
+@InProceedings{pong:2025:WMT,
+  author    = {Pong, Benjamin},
+  title     = {Contextual Selection of Pseudo-terminology Constraints for Terminology-aware Neural Machine Translation in the IT Domain},
+  booktitle      = {Proceedings of the Tenth Conference on Machine Translation (WMT 2025)},
+  month          = {November},
+  year           = {2025},
+  address        = {Suzhou, China},
+  publisher      = {Association for Computational Linguistics},
+  pages     = {1292--1301},
+  abstract  = {This system paper describes the development of a Neural Machine Translation system that is adapted to the Information Technology (IT) domain, and is able to translate specialized IT-related terminologies. Despite the popularity of incorporating terminology constraints at training time to develop terminology-aware Neural Machine Translation engines, one of the main issues is: In the absence of terminology references for training, and with the proliferation of source-target alignments, how does one select word alignments as pseudo-terminology constraints? The system in this work uses the encoder's final hidden states as proxies for terminologies, and selects word alignments with the highest norm as pseudo- terminology constraints for inline annotation at run-time. It compares this context-based approach against a conventional statistical approach, where terminology-constraints are selected based on a low-frequency threshold. The systems were evaluated for general translation quality and Terminology Success Rates, with results that validate the effectiveness of the contextual approach.},
+  url       = {https://aclanthology.org/2025.wmt-1.109}
+}
+```
+
+
 
 
