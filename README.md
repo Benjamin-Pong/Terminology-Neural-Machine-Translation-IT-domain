@@ -127,8 +127,6 @@ python clean_alignments.py \
 
 Due to the proliferation of word-alignments, there is a need to select only a subset of them for NMT training.
 
-# Selection of Pseudo-terminologies for NMT training (TBC)
-
 
 # Citation
 
